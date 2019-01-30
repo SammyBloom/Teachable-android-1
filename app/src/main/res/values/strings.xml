@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Teachable</string>
-    <string name="Teachable"></string>
+    <string name="Teachable">Teachable</string>
     <string name="forgot_password">Forgot Password</string>
 
     <string name="school_login">School Login</string>
@@ -24,6 +24,16 @@
     <string name="new_password">New Password</string>
     <string name="submit">Submit</string>
     <string name="terms_and_conditions">By registering on Teachable, you agree with our <u>Terms and Conditions</u>.</string>
+    <string name="reset_your_password">Reset Your Password</string>
+    <string name="lost_password_message">"Sorry you lost your password, let/'s help you regain access"
+                                        to your account. How should we send you a login code</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_code_message">We just sent you a reset code. Enter your code below:</string>
+    <string name="reset_code">Reset Code</string>
+    <string name="resend_code">"Didn/'t get the code? Resend Code"</string>
+
 
 
 </resources>
