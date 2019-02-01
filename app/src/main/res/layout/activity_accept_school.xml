@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".accept_school">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_individual"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/box_pad">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/drawable_pad"
+            android:orientation="vertical">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".accept_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/circle_img"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:src="@drawable/john"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+
+                <TextView
+                    android:id="@+id/individual_name"
+                    style="@style/name_drawable"
+                    android:layout_marginTop="@dimen/marginTop_firstText"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:drawableRight="@drawable/ic_check_circle_green_18dp"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_toRightOf="@id/circle_img"
+                    style="@style/textBeside_circularImg"
+                    android:text="@string/location"
+                    android:layout_below="@id/individual_name"
+                    android:drawableLeft="@drawable/ic_place_grey_18dp"
+                    android:drawablePadding="@dimen/elev"/>
+
+                <TextView
+                    android:id="@+id/rate"
+                    style="@style/header_circleImg"
+                    android:layout_below="@id/location"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:text="@string/rate" />
+
+                <RatingBar
+                    android:id="@+id/rate_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:layout_below="@id/location"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_marginLeft="100dp"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:numStars = "6"
+                    android:padding="@dimen/elev"
+                    android:rating="3.5"
+                    android:stepSize="0.5"/>
+            </RelativeLayout>
+
+            <Button
+                style="@style/longButton_noColor"
+                android:padding="@dimen/root_padding"
+                android:layout_marginTop="@dimen/large_space"
+                android:background="@drawable/button_green_outer_line"
+                android:text="@string/accept_invite" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/drawable_pad">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/img_dimension"
+                        android:src="@drawable/john" />
+
+                    <ImageView
+                        style="@style/img_dimension"
+                        android:src="@drawable/john" />
+
+                    <ImageView
+                        style="@style/img_dimension"
+                        android:src="@drawable/john" />
+                    <ImageView
+                        style="@style/img_dimension"
+                        android:src="@drawable/john" />
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                style="@style/layout">
+
+                <TextView
+                    android:id="@+id/more"
+                    style="@style/header"
+                    android:text="@string/more_info"
+                    android:layout_marginTop="@dimen/large_space"/>
+
+                <TextView
+                    android:id="@+id/sch"
+                    style="@style/small_text"
+                    android:layout_below="@id/more"
+                    android:text="@string/sch_type"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_below="@id/more"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/sch_typeW"/>
+
+                <TextView
+                    android:id="@+id/date_found"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/sch"
+                    android:text="@string/date_found"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/sch"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/date_founded"/>
+
+                <TextView
+                    android:id="@+id/sch_website"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/date_found"
+                    android:text="@string/sch_web"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/date_found"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/website"/>
+
+                <TextView
+                    android:id="@+id/wrk_hrs"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/sch_website"
+                    android:text="@string/work"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/sch_website"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/wrk_hrs"/>
+
+                <TextView
+                    android:id="@+id/approval"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/wrk_hrs"
+                    android:text="@string/approval"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/wrk_hrs"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/approved_by"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/header"
+                android:text="@string/review"
+                android:layout_marginTop="@dimen/large_space"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/extraLarge_space"
+                android:background="@drawable/edit_text_outler_line"/>
+
+            <Button
+                style="@style/small_button"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/box_pad"
+                android:layout_marginRight="@dimen/large_space"
+                android:text="@string/comment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_space">
+
+                <TextView
+                    android:id="@+id/member_name"
+                    android:layout_marginTop="@dimen/drawable_pad"
+                    style="@style/small_text"
+                    android:textColor="@color/colorGreen"
+                    android:text="@string/member"/>
+
+                <RatingBar
+                    android:id="@+id/rate_bar1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/drawable_pad"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:layout_marginLeft="120dp"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:numStars = "6"
+                    android:padding="@dimen/elev"
+                    android:rating="3.5"
+                    android:stepSize="0.5"/>
+
+                <TextView
+                    android:id="@+id/member_comment"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/member_name"
+                    style="@style/small_text"
+                    android:text="@string/comments"/>
+
+                <TextView
+                    android:id="@+id/member_name1"
+                    android:layout_marginTop="@dimen/drawable_pad"
+                    android:layout_below="@id/member_comment"
+                    style="@style/small_text"
+                    android:textColor="@color/colorGreen"
+                    android:text="@string/member"/>
+
+                <RatingBar
+                    android:id="@+id/rate_bar2"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/member_comment"
+                    android:layout_marginTop="@dimen/drawable_pad"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:layout_marginLeft="120dp"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:numStars = "6"
+                    android:padding="@dimen/elev"
+                    android:rating="3.5"
+                    android:stepSize="0.5"/>
+
+                <TextView
+                    android:id="@+id/member_comment1"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/member_name1"
+                    style="@style/small_text"
+                    android:text="@string/comments"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

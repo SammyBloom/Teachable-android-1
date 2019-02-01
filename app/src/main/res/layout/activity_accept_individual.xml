@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".accept_individual">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_individual"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/root_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circle_img"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="@dimen/drawable_pad"
+            android:src="@drawable/john"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        <TextView
+            android:id="@+id/individual_name"
+            android:layout_toRightOf="@id/circle_img"
+            style="@style/textBeside_circularImg"
+            android:text="@string/name"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/marginTop_firstText"/>
+
+        <TextView
+            android:layout_toRightOf="@id/circle_img"
+            style="@style/textBeside_circularImg"
+            android:text="@string/location"
+            android:layout_below="@id/individual_name"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        style="@style/header"
+        android:paddingTop="@dimen/root_padding"
+        android:paddingLeft="@dimen/root_padding"
+        android:text="@string/bio" />
+
+    <TextView
+        style="@style/sub_header"
+        android:paddingLeft="@dimen/root_padding"
+        android:paddingRight="@dimen/root_padding"
+        android:text="@string/bio_text" />
+
+    <Button
+        style="@style/longButton_noColor"
+        android:padding="@dimen/root_padding"
+        android:layout_marginTop="@dimen/large_space"
+        android:background="@drawable/button_green_outer_line"
+        android:text="@string/accept_invite" />
+
+    <RelativeLayout
+        style="@style/layout">
+
+        <TextView
+            android:id="@+id/more"
+            style="@style/header"
+            android:text="@string/more_info"
+            android:layout_marginTop="@dimen/large_space"/>
+
+        <TextView
+            android:id="@+id/marriage"
+            style="@style/small_text"
+            android:layout_below="@id/more"
+            android:text="@string/marital_stat"/>
+
+        <TextView
+            style="@style/small_text"
+            android:layout_below="@id/more"
+            android:layout_marginLeft="120dp"
+            android:text="@string/single"/>
+
+        <TextView
+            android:id="@+id/face_social"
+            android:layout_marginTop="@dimen/elev"
+            style="@style/small_text"
+            android:layout_below="@id/marriage"
+            android:text="@string/face_book"/>
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/elev"
+            android:layout_below="@id/marriage"
+            android:layout_marginLeft="120dp"
+            android:text="@string/facebook_url"/>
+
+        <TextView
+            android:id="@+id/insta_social"
+            android:layout_marginTop="@dimen/elev"
+            style="@style/small_text"
+            android:layout_below="@id/face_social"
+            android:text="@string/insta"/>
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/elev"
+            android:layout_below="@id/face_social"
+            android:layout_marginLeft="120dp"
+            android:text="@string/insta_url"/>
+
+        <TextView
+            android:id="@+id/tweet_social"
+            android:layout_marginTop="@dimen/elev"
+            style="@style/small_text"
+            android:layout_below="@id/insta_social"
+            android:text="@string/Tweet"/>
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/elev"
+            android:layout_below="@id/insta_social"
+            android:layout_marginLeft="120dp"
+            android:text="@string/tweet_url"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tutor_edit">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_individual"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/box_pad">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/drawable_pad"
+            android:orientation="vertical">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".accept_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/circle_img"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:src="@drawable/ic_add_a_photo_grey_18dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+
+                <EditText
+                    android:id="@+id/individual_name"
+                    style="@style/editName_drawable"
+                    android:background="@drawable/edit_text_outler_line"
+                    android:layout_marginTop="@dimen/marginTop_firstText"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:hint="Name" />
+
+                <EditText
+                    android:id="@+id/location"
+                    style="@style/editText_dropDown"
+                    android:layout_below="@id/individual_name"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:hint="Location" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/header"
+                android:paddingTop="@dimen/big_space"
+                android:text="@string/bio" />
+
+            <EditText
+                android:id="@+id/bio_edit"
+                style="@style/edit_text"
+                android:padding="@dimen/pad"
+                android:background="@drawable/edit_text_outler_line"
+                android:hint="@string/bio_text" />
+
+            <TextView
+                style="@style/small_text"
+                android:text="@string/characters"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/elev"/>
+
+            <TextView
+                android:id="@+id/more"
+                style="@style/header"
+                android:text="@string/more_info"
+                android:layout_marginTop="@dimen/large_space"/>
+
+            <RelativeLayout
+                style="@style/edit_container"
+                android:layout_marginTop="@dimen/elev"
+                android:padding="@dimen/box_space">
+
+                <TextView
+                    android:id="@+id/quali"
+                    style="@style/text"
+                    android:text="@string/qualification"
+                    android:layout_marginTop="@dimen/box_space"/>
+
+                <EditText
+                    android:id="@+id/quali_edit"
+                    style="@style/edit_text2"
+                    android:layout_marginTop="@dimen/pad"
+                    android:layout_toRightOf="@id/quali"
+                    android:background="@drawable/fullycurved_edit"
+                    android:hint="@string/qualify"
+                    android:layout_marginLeft="@dimen/pad"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete_grey_24dp"
+                    android:layout_toRightOf="@id/quali_edit"
+                    android:layout_marginLeft="@dimen/box_space"
+                    android:layout_marginTop="@dimen/box_space"/>
+
+                <EditText
+                    android:id="@+id/degree"
+                    style="@style/editText_dropDown"
+                    android:layout_below="@id/quali"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:hint="Degree" />
+
+                <EditText
+                    android:id="@+id/course"
+                    style="@style/editText_dropDown"
+                    android:layout_below="@id/quali"
+                    android:layout_toRightOf="@+id/degree"
+                    android:layout_marginLeft="@dimen/box_space"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:hint="Course" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_circle_green_24dp"
+                    android:layout_toRightOf="@id/course"
+                    android:layout_below="@id/quali"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="@dimen/big_space"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/edit_container"
+                android:layout_marginTop="@dimen/box_space"
+                android:padding="@dimen/box_space">
+
+                <TextView
+                    android:id="@+id/work_exp"
+                    style="@style/text"
+                    android:text="@string/Work_exp"
+                    android:layout_marginTop="@dimen/box_space"/>
+
+                <EditText
+                    android:id="@+id/work_exp_edit"
+                    style="@style/edit_text2"
+                    android:layout_marginTop="@dimen/pad"
+                    android:layout_toRightOf="@id/work_exp"
+                    android:background="@drawable/fullycurved_edit"
+                    android:hint="@string/experience"
+                    android:layout_marginLeft="@dimen/pad"/>
+
+                <EditText
+                    android:id="@+id/position"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/pad"
+                    android:background="@drawable/edit_text_outler_line"
+                    android:layout_below="@id/work_exp"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:hint="Position" />
+
+                <EditText
+                    android:id="@+id/course2"
+                    style="@style/editText_dropDown"
+                    android:layout_below="@id/work_exp"
+                    android:layout_toRightOf="@+id/position"
+                    android:layout_marginLeft="@dimen/big_space"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:hint="Course" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete_grey_24dp"
+                    android:layout_toRightOf="@id/course2"
+                    android:layout_below="@id/work_exp"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginTop="@dimen/box_space"/>
+
+                <TextView
+                    android:id="@+id/frm"
+                    style="@style/text"
+                    android:layout_below="@id/position"
+                    android:layout_marginTop="@dimen/pad"
+                    android:text="From:" />
+
+                <EditText
+                    android:id="@+id/year_from"
+                    style="@style/editText_dropDown"
+                    android:layout_below="@id/frm"
+                    android:layout_marginTop="@dimen/pad"
+                    android:hint="2015" />
+
+                <TextView
+                    android:id="@+id/to"
+                    style="@style/text"
+                    android:layout_below="@id/frm"
+                    android:layout_toRightOf="@id/year_from"
+                    android:layout_marginLeft="@dimen/pad"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:text="To" />
+
+                <EditText
+                    android:id="@+id/year_to"
+                    style="@style/editText_dropDown"
+                    android:layout_below="@id/frm"
+                    android:layout_toRightOf="@id/to"
+                    android:layout_marginLeft="@dimen/pad"
+                    android:layout_marginTop="@dimen/pad"
+                    android:hint="2017" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_circle_green_24dp"
+                    android:layout_toRightOf="@id/year_to"
+                    android:layout_below="@id/frm"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="@dimen/big_space"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/edit_container"
+                android:layout_marginTop="@dimen/box_space"
+                android:padding="@dimen/box_space">
+
+                <TextView
+                    android:id="@+id/stat"
+                    style="@style/text"
+                    android:layout_marginTop="@dimen/pad"
+                    android:text="@string/stat" />
+
+                <RadioGroup
+                    android:layout_toRightOf="@id/stat"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_marginLeft="@dimen/pad"
+                    android:id="@+id/radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_button_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="@string/part_time" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="@string/full_time" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/edit_container"
+                android:layout_marginTop="@dimen/box_space"
+                android:padding="@dimen/box_space">
+
+                <TextView
+                    android:id="@+id/marital_stat"
+                    style="@style/text"
+                    android:layout_marginTop="@dimen/pad"
+                    android:text="@string/marital_stat" />
+
+                <EditText
+                    android:id="@+id/course3"
+                    style="@style/editText_dropDown"
+                    android:layout_toRightOf="@+id/marital_stat"
+                    android:layout_marginLeft="@dimen/big_space"
+                    android:layout_marginTop="@dimen/pad"
+                    android:hint="Single" />
+
+            </RelativeLayout>
+
+            <Button
+                style="@style/button_color"
+                android:padding="@dimen/root_padding"
+                android:layout_marginTop="@dimen/pad"
+                android:background="@drawable/green_button"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

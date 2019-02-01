@@ -11,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".tutor_edit"></activity>
+        <activity android:name=".tutorProfile_view" />
+        <activity android:name=".tutorProfile_main" />
+        <activity android:name=".tutorProfile_main2" />
+        <activity android:name=".accept_school" />
+        <activity android:name=".individual_registration_option" />
+        <activity android:name=".individual_registeration" />
+        <activity android:name=".individual_login" />
+        <activity android:name=".accept_individual" />
         <activity
             android:name=".SchoolView"
             android:theme="@style/AppThemeNoActionbar">
@@ -21,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FirstResetPasswordPage" />
-        <activity android:name=".SecondResetPasswordPage"></activity>
+        <activity android:name=".SecondResetPasswordPage" />
     </application>
 
 </manifest>

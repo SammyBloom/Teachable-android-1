@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tutorProfile_view">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_individual"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/box_pad">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/drawable_pad"
+            android:orientation="vertical">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context=".accept_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/circle_img"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="@dimen/box_space"
+                    android:src="@drawable/john"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+
+                <TextView
+                    android:id="@+id/individual_name"
+                    style="@style/name_drawable"
+                    android:layout_marginTop="@dimen/marginTop_firstText"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:drawableRight="@drawable/ic_check_circle_green_18dp"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_toRightOf="@id/circle_img"
+                    style="@style/textBeside_circularImg"
+                    android:text="@string/location"
+                    android:layout_below="@id/individual_name"
+                    android:drawableLeft="@drawable/ic_place_grey_18dp"
+                    android:drawablePadding="@dimen/elev"/>
+
+                <TextView
+                    android:id="@+id/rate"
+                    style="@style/header_circleImg"
+                    android:layout_below="@id/location"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:text="@string/rate" />
+
+                <RatingBar
+                    android:id="@+id/rate_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:layout_below="@id/location"
+                    android:layout_toRightOf="@id/circle_img"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_marginLeft="100dp"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:numStars = "6"
+                    android:padding="@dimen/elev"
+                    android:rating="3.5"
+                    android:stepSize="0.5"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/header"
+                android:paddingTop="@dimen/big_space"
+                android:text="@string/bio" />
+
+            <TextView
+                style="@style/sub_header"
+                android:paddingRight="@dimen/root_padding"
+                android:text="@string/bio_text" />
+
+            <Button
+                style="@style/button_color"
+                android:padding="@dimen/root_padding"
+                android:layout_marginTop="@dimen/large_space"
+                android:background="@drawable/green_button"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:text="@string/edit_profile" />
+
+            <RelativeLayout
+                style="@style/layout">
+
+                <TextView
+                    android:id="@+id/more"
+                    style="@style/header"
+                    android:text="@string/more_info"
+                    android:layout_marginTop="@dimen/large_space"/>
+
+                <TextView
+                    android:id="@+id/qua"
+                    style="@style/small_text"
+                    android:layout_below="@id/more"
+                    android:text="@string/qualification"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_below="@id/more"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/qualify"/>
+
+                <TextView
+                    android:id="@+id/wrk_exp"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/qua"
+                    android:text="@string/Work_exp"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/qua"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/experience"/>
+
+                <TextView
+                    android:id="@+id/stat"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/wrk_exp"
+                    android:text="@string/stat"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/wrk_exp"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/status"/>
+
+                <TextView
+                    android:id="@+id/marital_stat"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/stat"
+                    android:text="@string/marital_stat"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/stat"
+                    android:layout_marginLeft="120dp"
+                    android:text="@string/single"/>
+
+                <TextView
+                    android:id="@+id/test"
+                    style="@style/header"
+                    android:text="@string/test_scores"
+                    android:layout_below="@id/marital_stat"
+                    android:layout_marginTop="@dimen/large_space"/>
+
+                <TextView
+                    android:id="@+id/gen_knowledge"
+                    style="@style/small_text"
+                    android:layout_below="@id/test"
+                    android:text="@string/gen_know"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_below="@id/test"
+                    android:layout_marginLeft="130dp"
+                    android:text="@string/gen_know_score"/>
+
+                <TextView
+                    android:id="@+id/skill_knowledge"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/gen_knowledge"
+                    android:text="@string/skill_know"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/gen_knowledge"
+                    android:layout_marginLeft="130dp"
+                    android:text="@string/skill_know_score"/>
+
+                <TextView
+                    android:id="@+id/teacher_lev"
+                    android:layout_marginTop="@dimen/elev"
+                    style="@style/small_text"
+                    android:layout_below="@id/skill_knowledge"
+                    android:text="@string/teacher_level"/>
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_marginTop="@dimen/elev"
+                    android:layout_below="@id/skill_knowledge"
+                    android:layout_marginLeft="130dp"
+                    android:text="@string/level"/>
+            </RelativeLayout>
+
+            <Button
+                style="@style/button_color"
+                android:padding="@dimen/root_padding"
+                android:layout_marginTop="@dimen/large_space"
+                android:background="@drawable/green_button"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:text="@string/take_test" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
